@@ -126,11 +126,9 @@ class igc{
     {
         $file = fopen('https://xcportal.pl/sites/default/files/tracks/2022-02-02/2022-02-02-xct-luk-04300303267.igc','r');
 
-        // przypisanie zawartości do zmiennej
         while(!feof($file))
         {
         $line = fgets($file);
-        //echo $line.'<br>';
         $this->getName($line);
         $this->getlogger($line);
         $this->getVersion($line);
